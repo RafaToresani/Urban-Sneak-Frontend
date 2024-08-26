@@ -4,6 +4,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RegisterRequest } from '../../../core/interfaces/auth/registerRequest';
 import { HttpErrorResponse } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +18,7 @@ export class RegisterComponent {
   form!:FormGroup;
   error:String = '';
 
-  constructor(private fb:FormBuilder, private authService:AuthService){
+  constructor(private fb:FormBuilder, private authService:AuthService, private route:Router){
 
   }
 
@@ -46,8 +47,7 @@ export class RegisterComponent {
         this.error = errorData.error.error;
       },
       complete: () => {
-        alert("Usuario creado")
-        /* this.route.navigateByUrl('/home'); */
+        this.route.navigateByUrl('/home');
         this.form.reset();
       }
     })

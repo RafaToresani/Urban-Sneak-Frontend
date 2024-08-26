@@ -47,9 +47,7 @@ export class LoginComponent implements OnInit{
         this.error = errorData.error.error;
       },
       complete: () => {
-        console.info("Login completo");
-        /* this.route.navigateByUrl('/home'); */
-        alert("login completo" + `${this.auth.currentUserData.getValue}`);
+        this.route.navigateByUrl('/home')
         this.loginForm.reset();
       }
     })

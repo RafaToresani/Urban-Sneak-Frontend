@@ -71,4 +71,5 @@ export class SessionService {
   isAuth(): boolean {
     return this.currentUserLoginOn.value;
   }
+
 }

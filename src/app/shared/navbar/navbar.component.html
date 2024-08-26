@@ -1,1 +1,30 @@
-<p>navbar works!</p>
+<section>
+  <header>
+    <div class="search-bar">
+      <input type="text" placeholder="search" />
+    </div>
+    <div class="title">
+      <h1>Urban Sneak</h1>
+    </div>
+    <div class="user-info">
+      <p>Carrito</p>
+      @if(isLoggedIn===true) {
+      <p>
+        Hola, <span>{{ userName }}</span
+        >!
+      </p>
+      <p class="btn" (click)="logout()">Log out</p>
+      }@else{
+      <p class="btn" (click)="navigateTo('/login')">Log In</p>
+      }
+    </div>
+  </header>
+  <hr />
+  <nav>
+    <p>Home</p>
+    <p>Categories</p>
+    <p>About us</p>
+    <p>Contact</p>
+  </nav>
+  <hr />
+</section>

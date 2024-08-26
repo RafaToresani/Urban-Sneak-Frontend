@@ -1,0 +1,83 @@
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--secondary-color);
+}
+header{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.search-bar{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+}
+
+.title{
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%
+}
+
+h1{
+    font-size: 48px;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    gap: 16px;
+}
+
+.btn{
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover{
+    color: var(--primary-color);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 8px;
+}
+
+
+
+nav p{
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+nav p:hover{
+    color: var(--primary-color);
+}
+
+hr {
+    height: 1px; /* Define el grosor del <hr> */
+    background-color: var(--text-color); /* Define el color del <hr> */
+    border: none;
+    width: 100%; /* Elimina el borde predeterminado del <hr> */
+}
