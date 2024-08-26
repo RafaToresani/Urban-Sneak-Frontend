@@ -1,0 +1,5 @@
+@if (currentComponent === 'login'){
+    <app-login (changeComponent)="setCurrentComponent($event)"></app-login>
+}@else if (currentComponent === "register") {
+    <app-register (changeComponent)="setCurrentComponent($event)"></app-register>
+}
