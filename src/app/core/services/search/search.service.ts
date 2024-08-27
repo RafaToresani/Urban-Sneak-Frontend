@@ -7,16 +7,7 @@ import { SearchParams } from '../../interfaces/searchParams';
 })
 export class SearchService {
 
-  searchParamsSubject = new BehaviorSubject<SearchParams>({
-      name: '',
-      brand: '',
-      category: '',
-      min: 0,
-      max: 9999,
-      page: 1,
-      size: 10,
-      sort: 'name',
-  })
+  searchParamsSubject = new BehaviorSubject<SearchParams>({})
   constructor() { }
 
   searchParams$ = this.searchParamsSubject.asObservable();

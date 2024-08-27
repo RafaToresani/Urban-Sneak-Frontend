@@ -22,12 +22,12 @@ export class ProductListComponent implements OnInit{
   ngOnInit(): void {
     this.searchService.searchParams$.subscribe({
       next: (params) => {
+        console.log(params);
         this.productService.getProducts(params).subscribe(response => {
           this.products = response;
         });
       }
     });
-
   }
 
   

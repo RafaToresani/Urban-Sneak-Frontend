@@ -1,8 +1,15 @@
-
-AAA
-@if (products !== undefined) { 
-    @for (item of products.content; track $index) {
-        <p>{{item.name}}</p>
-    }
-}
+<section>
+    @if (products !== undefined) { @for (item of products.content; track $index) {
+        <div class="card">
+            <div class="img-container">
+                <img class="card-img" src="assets/shoe-template.jpg"/>  
+            </div>
+            <div class="info-container">
+                <h1>{{item.name.toUpperCase()}}</h1>
+                <p class="price">${{item.price}}</p>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+    }}
+</section>
 

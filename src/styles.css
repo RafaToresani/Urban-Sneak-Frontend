@@ -3,14 +3,14 @@
     --primary-color: #FFD23F; 
     --secondary-color: #001829;
     --danger-color: #84828F;
-    --text-color: #ffffff; /* Gris oscuro */
-    --bg-color: #FFF; /* Gris claro */
+    --text-color: #ffffff; 
+    --bg-color: #FFF; 
 }
   
 html {
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: black;
+    background-color: var(--bg-color);
     color: var(--text-color);
 }
 

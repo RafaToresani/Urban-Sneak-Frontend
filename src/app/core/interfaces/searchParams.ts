@@ -6,5 +6,5 @@ export interface SearchParams {
   max?: number;        
   page?: number;       
   size?: number;       
-  sort?: string;       
+  sort?: string;    
 }
