@@ -1,7 +1,10 @@
 <section>
   <header>
-    <div class="search-bar">
-      <input type="text" placeholder="search" />
+    <div class="search-bar" (submit)="onSearch()">
+      <form [formGroup]="searchForm">
+        <input type="text" placeholder="Search product" formControlName="query">
+        <button type="submit">buscar</button>
+      </form>
     </div>
     <div class="title">
       <h1>Urban Sneak</h1>

@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { ProductService} from '../product.service';
 import { Product, ProductsResponse } from './../../../core/interfaces/product/productsResponse';
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../../../core/services/search/search.service';
 
 @Component({
   selector: 'app-product-list',
@@ -14,22 +15,19 @@ export class ProductListComponent implements OnInit{
 
   products!:ProductsResponse;
 
-  constructor(private productService:ProductService){
+  constructor(private productService:ProductService, private searchService:SearchService){
 
   }
 
   ngOnInit(): void {
-    const searchParams = {
-      page: 0,
-      size: 20
-    };
-    
-    this.productService.getProducts(searchParams).subscribe({
-      next: (response:ProductsResponse) => {
-        this.products=response;
-        console.log(this.products)
+    this.searchService.searchParams$.subscribe({
+      next: (params) => {
+        this.productService.getProducts(params).subscribe(response => {
+          this.products = response;
+        });
       }
-    })
+    });
+
   }
 
   
