@@ -3,8 +3,8 @@
     --primary-color: #FFD23F; 
     --secondary-color: #001829;
     --danger-color: #84828F;
-    --text-color: #ffffff; 
-    --bg-color: #FFF; 
+    --text-color: #ffffff; /* Gris oscuro */
+    --bg-color: #FFF; /* Gris claro */
 }
   
 html {
