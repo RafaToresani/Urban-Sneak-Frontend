@@ -28,6 +28,9 @@
     <p>Categories</p>
     <p>About us</p>
     <p>Contact</p>
+    @if (getRole()==='ADMIN') {
+      <p (click)="navigateTo('/management')">Admin Menu</p>
+    }
   </nav>
   <hr />
 </section>

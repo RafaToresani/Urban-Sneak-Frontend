@@ -18,3 +18,8 @@ html {
     box-sizing: inherit;
     margin: 0;
 }
+
+.main{
+    position: absolute;
+    top: 100px;
+}

@@ -1,6 +1,6 @@
+import { SessionService } from './../../core/services/session/session.service';
 import { SearchParams } from './../../core/interfaces/searchParams';
 import { Component, OnInit } from '@angular/core';
-import { SessionService } from '../../core/services/session/session.service';
 import { Router } from '@angular/router';
 import { SearchService } from '../../core/services/search/search.service';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -59,5 +59,9 @@ export class NavbarComponent implements OnInit {
     }
     this.searchService.setSearchParams(params);
     this.router.navigateByUrl("/home");
+  }
+
+  getRole(): string {
+    return this.sessionService.userRole();
   }
 }

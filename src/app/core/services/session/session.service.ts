@@ -72,4 +72,8 @@ export class SessionService {
     return this.currentUserLoginOn.value;
   }
 
+  userRole(): string{
+    const userdata = this.currentUserData.getValue();
+    return userdata.role;
+  }
 }
