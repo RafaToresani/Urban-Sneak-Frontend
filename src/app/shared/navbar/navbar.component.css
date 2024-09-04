@@ -18,7 +18,10 @@ header{
     margin: 0 auto;
 }
 
-
+.input{
+    height: 32px;
+    width: 240px;
+}
 
 .title{
     grid-column: 2/3;
@@ -41,14 +44,14 @@ h1{
     gap: 16px;
 }
 
-
 nav{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 32px;
-    padding: 8px;
+    background-color: var(--bg-color-light);
+    width: 100%;
+    padding: 4px;
 }
 
 hr {

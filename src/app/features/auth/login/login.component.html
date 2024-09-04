@@ -1,26 +1,46 @@
 <section>
-    <h2>Welcome!</h2>
-    <form [formGroup]="loginForm" (submit)="login()">
-        @if (error !== ''){<p>{{error}}</p>}
-        <div class="form-field">
-            <label for="email">Email: </label>
-            <input type="email" name="email" id="email" formControlName="email" >
-            <p class="error" *ngIf="validate('email', 'required')"><span>Email is required</span></p>
-            <p class="error" *ngIf="validate('email', 'email')"><span>Invalid email format</span></p>
-        </div>
+  <h2>Welcome!</h2>
+  <form [formGroup]="loginForm" (submit)="login()">
+    @if (error !== ''){
+    <p>{{ error }}</p>
+    }
+    <div class="form-field">
+      <label for="email">Email </label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        formControlName="email"
+        class="input shadow-dark"
+      />
+      <p class="error" *ngIf="validate('email', 'required')">
+        Email is required
+      </p>
+      <p class="error" *ngIf="validate('email', 'email')">
+        Invalid email format
+      </p>
+    </div>
 
-        <div class="form-field">
-            <label for="password">Password: </label>
-            <input type="password" name="password" id="password" formControlName="password" >
-            <p class="error" *ngIf="validate('password', 'required')">Password is required</p>
-        </div>
+    <div class="form-field">
+      <label for="password">Password </label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        formControlName="password"
+        class="input shadow-dark"
+      />
+      <p class="error" *ngIf="validate('password', 'required')">
+        Password is required
+      </p>
+    </div>
 
-        <div class="form-field">
-            <button type="submit">Login</button>
-        </div>
+    <div class="form-field">
+      <button type="submit" class="btn btn-dark shadow-primary">Login</button>
+    </div>
+  </form>
 
-        <div class="form-field">
-            <p class="redirect-link" >You dont have an Account? <span (click)="goToRegister()">Sing up!</span></p>
-        </div>
-    </form>
+  <p class="redirect-link">
+    You dont have an Account? <span (click)="goToRegister()">Sing up!</span>
+  </p>
 </section>

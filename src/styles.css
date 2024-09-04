@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(shadows.css);
 :root {
     --primary-color: #FFD23F;
     --success-color: #29E7CD;
@@ -9,7 +10,7 @@
     --text-color-dark: #000;
     --bg-color-light: #F7F7F7;
     --bg-color-mid: #ebebeb;
-    --bg-color-dark: #000; 
+    --bg-color-dark: #000;
 }
 
 html {
@@ -24,18 +25,40 @@ html {
     margin: 0;
 }
 
-.btn-nav{
+.btn{
+    width: 128px;
+    border: 0;
     font-size: 16px;
-    margin: 0;
-    padding: 0;
-    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.btn-nav{
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .btn-nav:hover{
-    color: var(--primary-color);
+    box-shadow: 0 6px 0 0 var(--primary-color);
+    transform: translate(0px, -2px);
 }
 
-.search-form{
+.btn-nav:focus{
+    box-shadow: 0 6px 0 0 var(--primary-color);
+    transform: translate(0px, -2px);
+}
+
+.btn-dark{
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-light);
+}
+
+.btn-light{
+    background-color: var(--bg-color-light);
+    color: var(--text-color-dark);
+}
+
+
+.search-form {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -44,17 +67,15 @@ html {
     gap: 8px;
 }
 
-.search-bar {
-    width: 240px;
-    height: 50%; 
-    border: none; 
-    border-radius: 0; 
+.input {
+    border: none;
+    border-radius: 0;
     box-sizing: border-box;
-    font-size: 16px; 
-    outline: none; 
+    font-size: 16px;
+    outline: none;
 }
 
-.search-submit{
+.search-submit {
     width: 128px;
     height: 50%;
     border: 0;
@@ -64,90 +85,6 @@ html {
     cursor: pointer;
 }
 
-
-.shadow-primary {
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 4px 4px 0 0 var(--primary-color);
+.error{
+    color:var(--danger-color)
 }
-
-.shadow-primary:hover {
-    box-shadow: 6px 6px 0 0 var(--primary-color);
-    transform: translate(-2px, -2px);
-}
-
-.shadow-primary:focus {
-    box-shadow: 6px 6px 0 0 var(--primary-color);
-    transform: translate(-2px, -2px);
-}
-
-.shadow-success {
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 4px 4px 0 0 var(--success-color);
-}
-
-.shadow-success:hover {
-    box-shadow: 6px 6px 0 0 var(--success-color);
-    transform: translate(-2px, -2px);
-}
-
-.shadow-success:focus {
-    box-shadow: 6px 6px 0 0 var(--success-color);
-    transform: translate(-2px, -2px);
-}
-
-.shadow-danger {
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 4px 4px 0 0 var(--danger-color);
-}
-
-.shadow-danger:hover {
-    box-shadow: 6px 6px 0 0 var(--danger-color);
-    transform: translate(-2px, -2px);
-}
-
-.shadow-danger:focus {
-    box-shadow: 6px 6px 0 0 var(--danger-color);
-    transform: translate(-2px, -2px);
-}
-
-/* Without transition*/
-/* Con transición de box-shadow, sin transform */
-.shadow-primary-no-transition {
-    transition: box-shadow 0.3s ease-in-out;
-    box-shadow: 4px 4px 0 0 var(--primary-color);
-}
-
-.shadow-primary-no-transition:hover {
-    box-shadow: 6px 6px 0 0 var(--primary-color);
-}
-
-.shadow-primary-no-transition:focus {
-    box-shadow: 6px 6px 0 0 var(--primary-color);
-}
-
-.shadow-success-no-transition {
-    transition: box-shadow 0.3s ease-in-out;
-    box-shadow: 4px 4px 0 0 var(--success-color);
-}
-
-.shadow-success-no-transition:hover {
-    box-shadow: 6px 6px 0 0 var(--success-color);
-}
-
-.shadow-success-no-transition:focus {
-    box-shadow: 6px 6px 0 0 var(--success-color);
-}
-
-.shadow-danger-no-transition {
-    transition: box-shadow 0.3s ease-in-out;
-    box-shadow: 4px 4px 0 0 var(--danger-color);
-}
-
-.shadow-danger-no-transition:hover {
-    box-shadow: 6px 6px 0 0 var(--danger-color);
-}
-
-.shadow-danger-no-transition:focus {
-    box-shadow: 6px 6px 0 0 var(--danger-color);
-}
-
