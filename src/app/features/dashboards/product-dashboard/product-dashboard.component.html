@@ -1,11 +1,10 @@
 <section>
     <nav>
-        <form [formGroup]="searchForm" (submit)="onSearch()">
-            <input type="text" placeholder="Search product" formControlName="query">
-            <button type="submit">buscar</button>
+        <form [formGroup]="searchForm" (submit)="onSearch()" class="search-form">
+            <input type="text" placeholder="Search product" formControlName="query" class="search-bar shadow-primary-no-transition">
+            <button type="submit" class="search-submit shadow-success">Search</button>
         </form>
-
-        <button>Add Product</button>
+        <button class="search-submit shadow-primary">Add Product</button>
     </nav>
 
     <table>
