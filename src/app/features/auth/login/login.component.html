@@ -4,14 +4,14 @@
         @if (error !== ''){<p>{{error}}</p>}
         <div class="form-field">
             <label for="email">Email: </label>
-            <input type="text" name="email" id="email" formControlName="email">
+            <input type="email" name="email" id="email" formControlName="email" >
             <p class="error" *ngIf="validate('email', 'required')"><span>Email is required</span></p>
             <p class="error" *ngIf="validate('email', 'email')"><span>Invalid email format</span></p>
         </div>
 
         <div class="form-field">
             <label for="password">Password: </label>
-            <input type="text" name="password" id="password" formControlName="password">
+            <input type="password" name="password" id="password" formControlName="password" >
             <p class="error" *ngIf="validate('password', 'required')">Password is required</p>
         </div>
 

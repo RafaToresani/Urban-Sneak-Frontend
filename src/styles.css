@@ -1,17 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --primary-color: #FFD23F; 
-    --secondary-color: #001829;
-    --danger-color: #84828F;
-    --text-color: #ffffff; /* Gris oscuro */
-    --bg-color: #FFF; /* Gris claro */
+    --primary-color: #FFD23F;
+    --success-color: #29E7CD;
+    --danger-color: #D81E5B;
+    --disabled-color: #A5ABAF;
+    --text-color-light: #F7F7F7;
+    --text-color-dark: #000;
+    --bg-color-light: #F7F7F7;
+    --bg-color-dark: #000; 
 }
-  
+
 html {
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--bg-color-light);
+    color: var(--text-color-dark);
 }
 
 *, *:after, *:before {
@@ -19,7 +22,13 @@ html {
     margin: 0;
 }
 
-.main{
-    position: absolute;
-    top: 100px;
+.btn-nav{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-nav:hover{
+    color: var(--primary-color);
 }

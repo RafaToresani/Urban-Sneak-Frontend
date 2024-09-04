@@ -16,20 +16,20 @@
         Hola, <span>{{ userName }}</span
         >!
       </p>
-      <p class="btn" (click)="logout()">Log out</p>
+      <p class="btn-nav" (click)="logout()">Log out</p>
       }@else{
-      <p class="btn" (click)="navigateTo('/login')">Log In</p>
+      <p class="btn-nav" (click)="navigateTo('/login')">Log In</p>
       }
     </div>
   </header>
   <hr />
   <nav>
-    <p (click)="navigateTo('/home')">Home</p>
-    <p>Categories</p>
-    <p>About us</p>
-    <p>Contact</p>
+    <p (click)="navigateTo('/home')" class="btn-nav">Home</p>
+    <p class="btn-nav">Categories</p>
+    <p class="btn-nav">About us</p>
+    <p class="btn-nav">Contact</p>
     @if (getRole()==='ADMIN') {
-      <p (click)="navigateTo('/management')">Admin Menu</p>
+      <p (click)="navigateTo('/management')" class="btn-nav">Admin Menu</p>
     }
   </nav>
   <hr />
