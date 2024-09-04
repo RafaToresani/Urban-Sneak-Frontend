@@ -19,6 +19,7 @@ export class ProductService {
     return this.http.get<ProductsResponse>(`${environment.apiUrl}${environment.version}/products`, { params:httpParam });
   }
 
+
   private buildHttpParams(params: SearchParams): HttpParams {
     let httpParams = new HttpParams();
 

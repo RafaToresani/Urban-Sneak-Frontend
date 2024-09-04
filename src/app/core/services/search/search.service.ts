@@ -16,5 +16,7 @@ export class SearchService {
     this.searchParamsSubject.next(params);
   }
 
-  
+  resetSearchParams() {
+    this.searchParamsSubject.next({});
+  }
 }

@@ -1,1 +1,50 @@
-<p>product-dashboard works!</p>
+<section>
+    <nav>
+        <form [formGroup]="searchForm" (submit)="onSearch()">
+            <input type="text" placeholder="Search product" formControlName="query">
+            <button type="submit">buscar</button>
+        </form>
+
+        <button>Add Product</button>
+    </nav>
+
+    <table>
+        <thead>
+          <tr>
+            <th>SKU Code</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Brand</th>
+            <th>Material</th>
+            <th>Price</th>
+            <th>More Details</th>
+            <th>Inventory</th>
+            <th>Update</th>
+            <th>Hide/Show</th>
+          </tr>
+        </thead>
+        <tbody>
+            @if (products.content!==undefined) {
+                @for (item of products.content; track $index) {
+                    <tr>
+                    <td>{{item.skuCode}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.category}}</td>
+                    <td>{{item.brand}}</td>
+                    <td>{{item.material}}</td>
+                    <td>${{item.price}}</td>
+                    <td><a class="btn-nav">+</a></td>
+                    <td>Inventory</td>
+                    <td><button>Update</button></td>
+                    <td><button>Hide</button></td>
+                    </tr>
+                }
+            }
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="10">End of products</td>
+          </tr>
+        </tfoot>
+      </table>
+</section>
