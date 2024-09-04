@@ -2,6 +2,7 @@ import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { AuthResponse } from '../../interfaces/auth/authResponse';
 import { isPlatformBrowser } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class SessionService {
     role: ''
   });
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private router:Router) {
     this.initializeSession();
   }
 
@@ -57,6 +58,7 @@ export class SessionService {
         token: '',
         role: ''
       });
+      this.router.navigateByUrl("/home");
     }
   }
 
@@ -72,4 +74,8 @@ export class SessionService {
     return this.currentUserLoginOn.value;
   }
 
+  userRole(): string{
+    const userdata = this.currentUserData.getValue();
+    return userdata.role;
+  }
 }

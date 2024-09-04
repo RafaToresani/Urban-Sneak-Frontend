@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { LoginComponent } from "../../features/auth/login/login.component";
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { BehaviorSubject } from 'rxjs';
 import { RegisterComponent } from "../../features/auth/register/register.component";
 
 @Component({
@@ -15,7 +14,12 @@ import { RegisterComponent } from "../../features/auth/register/register.compone
 export class LoginPageComponent {
   currentComponent: string = 'login';
 
+  constructor(){
+
+  }
+
   setCurrentComponent(component: string) {
     this.currentComponent = component;
   }
+
 }

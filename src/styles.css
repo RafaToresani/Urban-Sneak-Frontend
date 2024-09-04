@@ -1,20 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(shadows.css);
 :root {
-    --primary-color: #FFD23F; 
-    --secondary-color: #001829;
-    --danger-color: #84828F;
-    --text-color: #ffffff; /* Gris oscuro */
-    --bg-color: #FFF; /* Gris claro */
+    --primary-color: #FFD23F;
+    --success-color: #29E7CD;
+    --danger-color: #D81E5B;
+    --disabled-color: #A5ABAF;
+    --text-color-light: #F7F7F7;
+    --text-color-mid: #ebebeb;
+    --text-color-dark: #000;
+    --bg-color-light: #F7F7F7;
+    --bg-color-mid: #ebebeb;
+    --bg-color-dark: #000;
 }
-  
+
 html {
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--bg-color-light);
+    color: var(--text-color-dark);
 }
 
 *, *:after, *:before {
     box-sizing: inherit;
     margin: 0;
+}
+
+.btn{
+    width: 128px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.btn-nav{
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn-nav:hover{
+    box-shadow: 0 6px 0 0 var(--primary-color);
+    transform: translate(0px, -2px);
+}
+
+.btn-nav:focus{
+    box-shadow: 0 6px 0 0 var(--primary-color);
+    transform: translate(0px, -2px);
+}
+
+.btn-dark{
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-light);
+}
+
+.btn-light{
+    background-color: var(--bg-color-light);
+    color: var(--text-color-dark);
+}
+
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 8px;
+}
+
+.input {
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-submit {
+    width: 128px;
+    height: 50%;
+    border: 0;
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-light);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.error{
+    color:var(--danger-color)
 }

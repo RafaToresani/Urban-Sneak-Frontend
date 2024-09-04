@@ -1,11 +1,16 @@
 <section>
   <header>
-    <div class="search-bar" (submit)="onSearch()">
-      <form [formGroup]="searchForm">
-        <input type="text" placeholder="Search product" formControlName="query">
-        <button type="submit">buscar</button>
+      <form [formGroup]="searchForm" (submit)="onSearch()" class="search-form">
+        <input
+          type="text"
+          placeholder="Search product"
+          formControlName="query"
+          class="input shadow-primary-no-transition"
+        />
+        <button type="submit" class="search-submit shadow-success">
+          Search
+        </button>
       </form>
-    </div>
     <div class="title">
       <h1>Urban Sneak</h1>
     </div>
@@ -16,18 +21,21 @@
         Hola, <span>{{ userName }}</span
         >!
       </p>
-      <p class="btn" (click)="logout()">Log out</p>
+      <p class="btn btn-dark shadow-danger" (click)="logout()">Log out</p>
       }@else{
-      <p class="btn" (click)="navigateTo('/login')">Log In</p>
+      <p class="btn btn-light btn-nav" (click)="navigateTo('/login')">Log In</p>
       }
     </div>
   </header>
   <hr />
   <nav>
-    <p (click)="navigateTo('/home')">Home</p>
-    <p>Categories</p>
-    <p>About us</p>
-    <p>Contact</p>
+    <p (click)="navigateTo('/home')" class="btn btn-light btn-nav">Home</p>
+    <p class="btn btn-light btn-nav">Categories</p>
+    <p class="btn btn-light btn-nav">About us</p>
+    <p class="btn btn-light btn-nav">Contact</p>
+    @if (getRole()==='ADMIN') {
+    <p (click)="navigateTo('/management')" class="btn btn-light btn-nav">Admin Menu</p>
+    }
   </nav>
   <hr />
 </section>

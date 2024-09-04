@@ -4,8 +4,8 @@
         <p *ngIf="error !== ''" class="error">{{ error }}</p>
 
         <div class="form-field">
-            <label for="firstName">First Name: </label>
-            <input type="text" id="firstName" formControlName="firstName">
+            <label for="firstName">First Name </label>
+            <input type="text" id="firstName" formControlName="firstName" class="input shadow-dark">
             <p class="error" *ngIf="validate('firstName', 'required')"><span>First name is required</span></p>
             <p class="error" *ngIf="validate('firstName', 'minlength')"><span>First name must be at least 2 characters long</span></p>
             <p class="error" *ngIf="validate('firstName', 'maxlength')"><span>First name cannot be longer than 50 characters</span></p>
@@ -13,8 +13,8 @@
         </div>
 
         <div class="form-field">
-            <label for="lastName">Last Name: </label>
-            <input type="text" id="lastName" formControlName="lastName">
+            <label for="lastName">Last Name </label>
+            <input type="text" id="lastName" formControlName="lastName" class="input shadow-dark">
             <p class="error" *ngIf="validate('lastName', 'required')"><span>Last name is required</span></p>
             <p class="error" *ngIf="validate('lastName', 'minlength')"><span>Last name must be at least 2 characters long</span></p>
             <p class="error" *ngIf="validate('lastName', 'maxlength')"><span>Last name cannot be longer than 50 characters</span></p>
@@ -22,8 +22,8 @@
         </div>
 
         <div class="form-field">
-            <label for="dni">DNI: </label>
-            <input type="text" id="dni" formControlName="dni">
+            <label for="dni">DNI </label>
+            <input type="text" id="dni" formControlName="dni" class="input shadow-dark">
             <p class="error" *ngIf="validate('dni', 'required')"><span>DNI is required</span></p>
             <p class="error" *ngIf="validate('dni', 'minlength')"><span>DNI must be 8 digits long</span></p>
             <p class="error" *ngIf="validate('dni', 'maxlength')"><span>DNI must be 8 digits long</span></p>
@@ -31,26 +31,23 @@
         </div>
 
         <div class="form-field">
-            <label for="email">Email: </label>
-            <input type="text" id="email" formControlName="email">
+            <label for="email">Email </label>
+            <input type="email" id="email" formControlName="email" class="input shadow-dark">
             <p class="error" *ngIf="validate('email', 'required')"><span>Email is required</span></p>
             <p class="error" *ngIf="validate('email', 'email')"><span>Invalid email format</span></p>
         </div>
 
         <div class="form-field">
-            <label for="password">Password: </label>
-            <input type="password" id="password" formControlName="password">
+            <label for="password">Password </label>
+            <input type="password" id="password" formControlName="password" class="input shadow-dark">
             <p class="error" *ngIf="validate('password', 'required')"><span>Password is required</span></p>
             <p class="error" *ngIf="validate('password', 'minlength')"><span>Password must be at least 8 characters long</span></p>
             <p class="error" *ngIf="validate('password', 'maxlength')"><span>Password cannot be longer than 20 characters</span></p>
         </div>
 
         <div class="form-field">
-            <button type="submit">Register</button>
-        </div>
-
-        <div class="form-field">
-            <p class="redirect-link">Already have an account? <span (click)="goToLogin()">Log in!</span> </p>
+            <button type="submit" class="btn btn-dark shadow-primary">Register</button>
         </div>
     </form>
+    <p class="redirect-link">Already have an account? <span (click)="goToLogin()">Log in!</span> </p>
 </section>

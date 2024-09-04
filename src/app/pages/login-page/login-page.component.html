@@ -1,5 +1,15 @@
-@if (currentComponent === 'login'){
-    <app-login (changeComponent)="setCurrentComponent($event)"></app-login>
-}@else if (currentComponent === "register") {
-    <app-register (changeComponent)="setCurrentComponent($event)"></app-register>
-}
+<section>
+    <div class="form shadow-primary-no-transition-strong">
+        <div class="img-container">
+            <img src="/img-login-form.jpg" alt="asd">
+        </div>
+        <div class="form-container">
+            @if (currentComponent === 'login'){
+                <app-login (changeComponent)="setCurrentComponent($event)"></app-login>
+            }@else if (currentComponent === "register") {
+                <app-register (changeComponent)="setCurrentComponent($event)"></app-register>
+            }    
+        </div>
+    </div>
+</section>
+

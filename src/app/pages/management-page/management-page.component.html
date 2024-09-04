@@ -1,0 +1,12 @@
+<section>
+    <div class="sidenav">
+        <p class="btn-nav" (click)="navigateTo('products')">Products</p>
+        <p class="btn-nav" (click)="navigateTo('orders')">Orders</p>
+        <p class="btn-nav" (click)="navigateTo('customers')">Customers</p>
+        <p class="btn-nav" (click)="navigateTo('managers')">Managers</p>
+    </div>
+
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</section>
